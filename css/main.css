@@ -1,0 +1,154 @@
+*, *::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --nav-height: 4rem;
+
+}
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100vw;
+}
+
+body {
+    cursor: none;
+    width: 100vw;
+    background: linear-gradient(90deg, hsl(175, 40%, 7%) 50%, hsl(175, 40%, 15%));
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke;
+    /* height: 120vh; */
+}
+
+::-webkit-scrollbar {
+    display: none;
+    scroll-behavior: smooth;
+}
+#cursor{
+    z-index: 99;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 0px 2px 5px #fff;
+}
+#nav-main-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.svg-box {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+
+}
+
+#mode {
+    background-image: url('/svg/dark_mode_white_24dp.svg');
+    background-size: cover;
+}
+
+#menu {
+    background-image: url('/svg/menu_white_24dp.svg');
+    background-size: cover;
+    z-index: 99;
+    border-radius: 50%;
+}
+#nav-menu-page{
+    position: fixed;
+    z-index: 10;
+    height: 70vh;
+    width: 50%;
+    right: 0;
+    top: 0;
+    transform: translate(0,-110%);
+    backdrop-filter: blur(3px);
+    backdrop-filter: brightness(70%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+#nav-menu-page div{
+    position: relative;
+    font-size: 1rem;
+    padding: 10px;
+    transition: 1s;
+}
+
+.line-hover span{
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: beige;
+    border-radius: 10px;
+    bottom: 0%;
+    left: 0;
+    transition: 0.5s;
+}
+.line-hover:hover > span{
+    width: 100%;
+}
+#about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#my-name {
+    position: absolute;
+    z-index: 5; 
+    bottom: 20%;
+    right: 0%;
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: 1rem;
+
+}
+#my-svg-outbox{
+    border-radius: 50%;
+    background-color: hsl(175, 40%, 7%) ;
+    transition: 0.5s;
+}
+#my-svg {
+    width: clamp(100px, 150px, 400px);
+    height: clamp(100px, 150px, 400px);
+    background-image: url('/svg/piyush2.png');
+    position: relative;
+    filter: brightness(80%);
+    background-size: cover;
+    border-radius: 50%;
+    transition: 1s;
+
+}
+
+#my-info {
+    width: 100%;
+    height: 350px;
+}
+
+#my-info-box {
+    width: clamp(300px, 50vw, 80vw);
+    margin: auto;
+    height: 300px;
+    padding: 1rem;
+    font-weight: lighter;
+    background-color: hsl(175, 40%, 10%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 0.5s;
+    opacity: 0;
+
+}

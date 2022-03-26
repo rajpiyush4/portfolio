@@ -1,0 +1,16 @@
+@keyframes menu-open{
+      
+        100%{
+            transform: translate(0,-5%);
+        }
+}
+@keyframes menu-close{
+       0%{
+        transform: translate(0,-5%);
+       }
+   
+        100%{
+            transform: translate(0,-110%);
+        }
+        
+}

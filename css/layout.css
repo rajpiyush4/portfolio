@@ -1,0 +1,10 @@
+nav{
+    position: fixed;
+    z-index: 99;
+    top: 0%;
+    width: 100%;
+    height: var(--nav-height);
+}
+#main-page{
+    margin-top: var(--nav-height);
+    }
