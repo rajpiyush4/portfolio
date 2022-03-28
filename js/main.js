@@ -2,8 +2,8 @@ window.onload=()=>{
     var $=document.querySelector.bind(document);
     var $All=document.querySelectorAll.bind(document);
 
-
-    $("#my-info-box").style="transform: translate(0,40px);opacity:1;";
+    var infobox= $("#my-info-box")
+    infobox.style="transform: translate(0,40px);opacity:1;";
 
     //menu bar animation
       var bool=true;
@@ -53,13 +53,32 @@ onmousemove=(e)=>{
     //  console.log(trans);
     //assosseries;
     // console.log(transChild.hypon);
-    
     myPicOut.style=`transform:translate(${trans.c}px,${trans.d}px);`;
     myPic.style=`transform:translate(${trans.c/1.2}px,${trans.d/1.3}px);  `;
         
 }
 
-
+//change-mode
+let bool2=true;
+$("#mode").onclick=()=>{
+    if(bool2){
+       $("body").style="background:#E5E3C9;color:hsl(175, 40%, 10%)"
+       $("#my-svg-outbox").style="background:#B4CFB0";
+       $("#my-info-box").style="background:#B4CFB0;transform: translate(0,40px);opacity:1;";
+       $("#mode").style="background-image: url('/svg/dark_mode_black_24dp.svg');background-size: cover;"
+       $("#menu").style="background-image: url('/svg/menu_black_24dp.svg');background-size: cover;"
+        bool2=false;
+        // console.log()
+    }
+    else{
+        $("body").style="background: linear-gradient(90deg, hsl(175, 40%, 7%) 50%, hsl(175, 40%, 15%));color:whitesmoke"
+        $("#my-svg-outbox").style="background:hsl(175, 40%, 7%)";
+        $("#my-info-box").style="background: hsl(175, 40%, 10%);transform: translate(0,40px);opacity:1;";
+        $("#mode").style="background-image: url('/svg/dark_mode_white_24dp.svg');background-size: cover;"
+        $("#menu").style="background-image: url('/svg/menu_white_24dp.svg');background-size: cover;"
+        bool2=true; 
+    }
+}
 
 
 
