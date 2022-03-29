@@ -28,6 +28,43 @@ body {
     display: none;
     scroll-behavior: smooth;
 }
+.start{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #B4CFB0;
+    transition: 0.5s;
+    z-index: 999;
+}
+#start-line{
+    position: relative;
+    display: block;
+    top: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: whitesmoke;
+    transition: 1s;
+    
+}
+.start::after{
+    content: "piyush raj";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    color: whitesmoke;
+}
+.start::before{
+    content: "2022";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,10%);
+    color: whitesmoke;
+}
 #cursor{
     z-index: 99;
     position: absolute;
